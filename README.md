@@ -132,7 +132,7 @@ To figure out the base station and Uplink-Downlink band the test smartphone is c
 ### General downlink sniffing
 
 <p align="center">
-  <img src="png/dl_mode_png.png" alt="LTESniffer Downlink Mode">
+  <img src="dl_mode_png.png" alt="LTESniffer Downlink Mode">
 </p>
 
 ```bash
@@ -156,7 +156,7 @@ example: sudo ./src/LTESniffer -A 2 -W 4 -f 1840e6 -C -m 0 -a "num_recv_frames=5
 Note: In the uplink sniffing mode, the test smartphones should be located nearby the sniffer, because the uplink signal power from UE is significantly weaker compared to the downlink signal from the base station.
 
 <p align="center">
-  <img src="png/ul_mode_png.png" alt="LTESniffer Uplink Mode">
+  <img src="ul_mode_png.png" alt="LTESniffer Uplink Mode">
 </p>
 
 ```bash
@@ -168,7 +168,7 @@ example: sudo ./src/LTESniffer -A 2 -W 4 -f 1840e6 -u 1745e6 -C -m 1
 ### Security API
 
 <p align="center">
-  <img src="png/api_png.png" alt="LTESniffer API Mode">
+  <img src="api_png.png" alt="LTESniffer API Mode">
 </p>
 
 ```bash
