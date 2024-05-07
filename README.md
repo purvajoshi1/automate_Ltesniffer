@@ -165,7 +165,8 @@ chmod +x automate_ltesniffer
 
 ```
 ## Credits
-We sincerely appreciate the [FALCON][falcon], [LTESniffer][ltesniffer] and [SRS team][srsran] for making their great softwares available.
+We sincerely appreciate the [FALCON][falcon], [LTESniffer](https://github.com/SysSec-KAIST/LTESniffer)
+and [SRS team][srsran] for making their great softwares available.
 
 ## Original developer:
 We would like to mention that LTESniffer and its code were developed by Hoang D. Tuan and their Laboratory team from SysSec-KAIST, Korea. We only modified as per our configurations of hardware which are USRP B210 and USRP N310. Also, we use Downlink LTESniffer for 48-hour downlink data acquisition and specific data extraction from JSON file to CSV file for traffic analysis between mobile phones and cellular towers. We also gathered LTE-TDD traffic with 24-hour data acquisition. 
