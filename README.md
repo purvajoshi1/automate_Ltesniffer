@@ -135,10 +135,37 @@ destination_pcap = f"{destination_directory}B210_DL_{current_time}.pcap"
 
 # Number of iterations and pcap files
 num_iterations = 48 #48 hour data acquisition
+```
+
+**Build automate_LTESniffer from application:**
+```bash
+Download the "automate_ltesniffer" file and start in the terminal with the following command:
+
+./automate_ltesniffer
+
+for change in the command line, you can download "command.cpp" file and write in the terminal:
+nano command.cpp
+---> Modify following lines as per your application:
+ // Define the command to execute
+    std::string command = "/home/purva/lte-B210/build/src/LTESniffer -A 1 -W 6 -f 1870e6 -C -m 0 -a \"num_recv_frames=512\"";
+ // Destination directory for .pcap files
+    std::string destination_directory = "/home/purva/Videos/test_B210/";
+ // Iterate 2 times ## change this according to the number of iterations for example 48 hours will give 48 iterations
+    for(int i = 1; i <= 2; ++i) {
+        // Execute the command with a timeout of 3600 seconds
+        std::string timeout_command = "timeout 3600s " + command; ### change time in seconds as per the requirements.
+        std::system(timeout_command.c_str());
+
+        // Move the file
+        std::string source = "/home/purva/vs-code/ltesniffer_dl_mode.pcap"; #change the directory path 
+---> Ctrl+x to exit and save the file.
+g++ -o automate_ltesniffer command.cpp -pthread
+chmod +x automate_ltesniffer
+./automate_ltesniffer
 
 ```
 ## Credits
-We sincerely appreciate the [FALCON][falcon] and [SRS team][srsran] for making their great softwares available.
+We sincerely appreciate the [FALCON][falcon], [LTESniffer][ltesniffer] and [SRS team][srsran] for making their great softwares available.
 
 ## Original developer:
 We would like to mention that LTESniffer and its code were developed by Hoang D. Tuan and their Laboratory team from SysSec-KAIST, Korea. We only modified as per our configurations of hardware which are USRP B210 and USRP N310. Also, we use Downlink LTESniffer for 48-hour downlink data acquisition and specific data extraction from JSON file to CSV file for traffic analysis between mobile phones and cellular towers. We also gathered LTE-TDD traffic with 24-hour data acquisition. 
