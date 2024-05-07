@@ -33,7 +33,7 @@ LTESniffer is implemented on top of [FALCON][falcon] with the help of [srsRAN][s
 - LTE Advanced and LTE Advanced Pro, up to 256QAM in both uplink and downlink
 - DCI formats: 0, 1A, 1, 1B, 1C, 2, 2A, 2B
 - Transmission modes: 1, 2, 3, 4
-- FDD only
+- FDD only (Note: try with TDD, it is working)
 - Maximum 20 MHz base station. 
 - Automatically detect maximum UL/DL modulation schemes of smartphones (64QAM/256QAM on DL and 16QAM/64QAM/256QAM on UL)
 - Automatically detect physical layer configuration per UE.
