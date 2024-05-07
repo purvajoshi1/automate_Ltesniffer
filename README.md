@@ -165,11 +165,10 @@ chmod +x automate_ltesniffer
 
 ```
 ## Credits
-We sincerely appreciate the [FALCON][falcon], [LTESniffer](https://github.com/SysSec-KAIST/LTESniffer)
-and [SRS team][srsran] for making their great softwares available.
+We sincerely appreciate the [FALCON][falcon], [LTESniffer](https://github.com/SysSec-KAIST/LTESniffer) and [SRS team][srsran] for making their great software available.
 
 ## Original developer:
-We would like to mention that LTESniffer and its code were developed by Hoang D. Tuan and their Laboratory team from SysSec-KAIST, Korea. We only modified as per our configurations of hardware which are USRP B210 and USRP N310. Also, we use Downlink LTESniffer for 48-hour downlink data acquisition and specific data extraction from JSON file to CSV file for traffic analysis between mobile phones and cellular towers. We also gathered LTE-TDD traffic with 24-hour data acquisition. 
+We would like to mention that LTESniffer and its code were developed by Hoang D. Tuan and their Laboratory team from SysSec-KAIST, Korea. We only modified as per our configurations of hardware which are USRP B210 and USRP N310. Also, we use Downlink LTESniffer for 48-hour downlink data acquisition and specific data extraction from JSON file to CSV file for traffic analysis between mobile phones and cellular towers. We also gathered LTE-TDD traffic with 24-hour data acquisition. We also created a C++ file to run the command and save downlink .PCAP file, which can be changed or modified according to specific use or applications. By evaluating 48-hour data acquisition in downlink mode, one can analyze the traffic patterns between mobile phones (UEs) which are commercial cellular SIM cards and base stations (mobile towers). There are two limitations in uplink sniffing for a longer time, in non-working hours any specific mobile should be placed near to antenna or ltesniffer, so we did not try or develop the same method for uplink sniffer. 
 
 [falcon]: https://github.com/falkenber9/falcon
 [srsran]: https://github.com/srsran/srsRAN_4G
